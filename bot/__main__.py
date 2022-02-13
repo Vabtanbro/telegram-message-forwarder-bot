@@ -45,8 +45,8 @@ def work(client, message):
         LOG.error(e)
 
 
-'''
-@app.on_message(filters.user(sudo_users) & filters.command(["fwd", "forward"]), group=1)
+
+@app.on_message(filters.user(sudo_users) & filters.command(["fwdold", "forwardold"]), group=1)
 def forward(app, message):
     if len(message.command) > 1:
       chat_id = get_formatted_chat(message.command[1], app)
@@ -72,7 +72,7 @@ def forward(app, message):
       sleep(20)
       reply.delete()
 
-'''
+
 
 
 @app.on_message(filters.user(sudo_users) & filters.command(["add_toc", "newtochal"]), group=1)
